@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File Explorer</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <!-- Page Heading -->
+  <header>
+    <h1>FILE VIEWER</h1>
+  </header>
+  
+  <!-- Folder Selection -->
+  <section>
+    <label for="folder" ><button id="customButton">Choose Folder</button></label>
+    <input type="file" id="folder" webkitdirectory directory multiple>
+  </section>
+  
+  <!-- Table to display file information -->
+  <table id="fileTable">
+    <thead>
+      <tr>
+        <th>File Name</th>
+        <th>File Size</th>
+        <th>Info</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Modal for displaying file information -->
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalFileName"></h2>
+      <p id="modalFileExtension"></p>
+      <p id="modalFileSize"></p>
+      <p id="modalOtherInfo"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
